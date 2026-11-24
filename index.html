@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Rofiqullah Munna | Full-Stack &amp; .NET Developer</title>
+  <meta name="description" content="Portfolio of Md. Rofiqullah Munna, CSE student at AIUB and full-stack / .NET / backend developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo" aria-label="Home">RM<span>.</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Switch to light theme">☀</button>
+      <a href="CV.pdf" class="btn btn-small" target="_blank">Resume</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+   
+    <section class="hero" id="home">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <p class="hero-status"><span class="dot"></span> Open to internships</p>
+          <h1 class="hero-name">Md. Rofiqullah<br />Munna</h1>
+          <p class="hero-role">Full-stack  developer</p>
+          <p class="hero-text">
+            I build web apps, desktop software and REST APIs with C#, ASP.NET Core,
+            NestJS and SQL. CSE student at AIUB, based in Dhaka.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View projects</a>
+            <a href="resume.pdf" class="btn btn-ghost" target="_blank">Download CV</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/munna89-ig" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/rofiqullah-munna-76301930a" target="_blank">LinkedIn</a>
+            <a href="mailto:rofiqullahmunna82@gmail.com">Email</a>
+          </div>
+        </div>
+
+        
+        <div class="console" aria-label="Interactive API console about me">
+          <div class="console-bar">
+            <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="console-title">munna-api</span>
+          </div>
+
+          <div class="endpoints" role="tablist">
+            <button class="endpoint active" role="tab" data-endpoint="me"><b>GET</b> /me</button>
+            <button class="endpoint" role="tab" data-endpoint="skills"><b>GET</b> /skills</button>
+            <button class="endpoint" role="tab" data-endpoint="projects"><b>GET</b> /projects</button>
+            <button class="endpoint" role="tab" data-endpoint="contact"><b>GET</b> /contact</button>
+          </div>
+
+          <div class="request">
+            <span class="method">GET</span>
+            <span class="url" id="reqUrl">https://api.munna.dev/v1/me</span>
+          </div>
+
+          <div class="response-meta" id="respMeta">
+            <span class="status">200 OK</span>
+            <span id="respTime">42 ms</span>
+            <span>application/json</span>
+          </div>
+
+          <pre class="response" id="response" aria-live="polite"></pre>
+
+          <p class="console-hint">Click an endpoint to send a request</p>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <div class="photo-frame">
+           <img src="Munna.png" alt="Md. Rofiqullah Munna"> 
+            <span class="photo-placeholder">RM</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h2 class="section-title">About</h2>
+          <p class="lead">
+            I like the part of software people don't see: clean data models, secure APIs and
+            business logic that holds up when real users arrive.
+          </p>
+          <p>
+            I'm studying Computer Science &amp; Engineering at American International
+            University-Bangladesh (AIUB), majoring in Software Engineering. I've built full-stack
+            web apps, Windows Forms desktop software and RESTful APIs, and I'm comfortable on the
+            front end too. Strong in Data Structures &amp; Algorithms.
+          </p>
+
+          <dl class="facts">
+            <div><dt>CGPA</dt><dd>3.80<small>/4.00</small></dd></div>
+            <div><dt>REST APIs built</dt><dd>139</dd></div>
+            <div><dt>Graduating</dt><dd>2027</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">What I use day to day, grouped by where it sits in the stack.</p>
+
+        <div class="skill-rows">
+          <div class="skill-row">
+            <h3>Backend</h3>
+            <ul class="chips">
+              <li class="strong">C#</li><li class="strong">ASP.NET Core</li><li class="strong">Entity Framework Core</li>
+              <li>.NET Core</li><li>Node.js</li><li>NestJS</li><li>REST API design</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Databases</h3>
+            <ul class="chips">
+              <li class="strong">SQL Server</li><li>PostgreSQL</li><li>MySQL</li><li>Oracle</li><li>Supabase</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Frontend &amp; desktop</h3>
+            <ul class="chips">
+              <li>React</li><li>React Native</li><li>HTML5</li><li>CSS3</li><li>JavaScript (ES6)</li>
+              <li>TypeScript</li><li>Windows Forms</li><li>Java Swing</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li>C#</li><li>C++</li><li>C</li><li>Java</li><li>Python</li><li>PHP</li><li>JavaScript</li><li>TypeScript</li>
+            </ul>
+          </div>
+          <div class="skill-row">
+            <h3>Concepts</h3>
+            <ul class="chips">
+              <li>OOP</li><li>Data Structures &amp; Algorithms</li><li>DTO pattern</li>
+              <li>Role-based auth</li><li>Dependency injection</li><li>MVC</li><li>Database design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Two deployed apps I built end to end, plus smaller web work.</p>
+
+        
+        <article class="feature">
+          <div class="feature-body">
+            <p class="feature-kind">Full-stack web app · Deployed on Azure(For login -> id:admin@example.com, pass:Admin@123)</p>
+            <h3>E-commerce Web Application</h3>
+            <p>
+              An online store with product variants, cart, wishlist, coupons and checkout, built on a
+              layered architecture with services and dependency injection.
+            </p>
+            <ul class="points">
+              <li>Admin panel for products, inventory, orders, payment verification and users</li>
+              <li>Cookie authentication, role-based authorization and audit logging</li>
+            </ul>
+            <ul class="tech"><li>ASP.NET Core MVC</li><li>EF Core</li><li>SQL Server</li><li>Azure</li></ul>
+            <div class="feature-links">
+              <a class="btn btn-primary btn-small" href="https://online-shop-cwedfeg3a9dgc2h3.centralindia-01.azurewebsites.net/" target="_blank">Open live site</a>
+              <a class="btn btn-ghost btn-small" href="https://github.com/munna89-ig/ecommerce-web-app-dotnet" target="_blank">View code</a>
+            </div>
+          </div>
+          <div class="feature-visual" aria-hidden="true">
+            <div class="mock">
+              <div class="mock-bar"><i></i><i></i><i></i></div>
+              <div class="mock-shop">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature reverse">
+          <div class="feature-body">
+            <p class="feature-kind">Team project · Backend (For login -> id: munna, pass: 654321)</p>
+            <h3>Privacy-First AI Data Control Center</h3>
+            <p>
+              Monitors AI coding tools through a local agent and blocks access to sensitive files,
+              secrets and risky commands using workspace policies.
+            </p>
+            <ul class="points">
+              <li>NestJS backend with 139 REST APIs and role-based access per workspace</li>
+              <li>Policy enforcement, risk findings, email alerts, audit logs, data retention, exports and deletion requests</li>
+            </ul>
+            <ul class="tech"><li>NestJS</li><li>TypeScript</li><li>Supabase</li><li>REST API</li></ul>
+            <div class="feature-links">
+              <a class="btn btn-primary btn-small" href="https://privacy-first-ai-data-control-center-cxs1.onrender.com" target="_blank">Open live site</a>
+              <a class="btn btn-ghost btn-small" href="https://github.com/Privacy-First-AI-Data-Control-Center/Privacy-First-AI-Data-Control-Center" target="_blank">View code</a>
+            </div>
+          </div>
+          <div class="feature-visual" aria-hidden="true">
+            <div class="api-count">
+              <span class="big">139</span>
+              <span class="small">endpoints</span>
+              <ul class="api-list mono">
+                <li><b>POST</b> /auth/login</li>
+                <li><b>GET</b> /workspaces/:id/policies</li>
+                <li><b>POST</b> /events</li>
+                <li><b>GET</b> /risk-findings</li>
+                <li><b>DELETE</b> /data/:id</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+       
+        <div class="mini-grid">
+          <article class="mini">
+            <h3>Library Management System</h3>
+            <p>Branch Manager module for a multi-branch library: inventory, librarian assignment, policies, reports, and real-time transfer requests with AJAX.</p>
+            <ul class="tech"><li>PHP</li><li>MySQL</li><li>AJAX</li><li>MVC</li></ul>
+            <a class="mini-link" href="https://github.com/munna89-ig/Library-Management-System_Web" target="_blank">View code</a>
+          </article>
+          <article class="mini">
+            <h3>Amazon Homepage Clone</h3>
+            <p>Responsive homepage with navigation, image slider and product showcase.</p>
+            <ul class="tech"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+            <a class="mini-link" href="https://github.com/munna89-ig/Amazon-Clone" target="_blank">View code</a>
+          </article>
+          <article class="mini">
+            <h3>Netflix Landing Page Clone</h3>
+            <p>Landing page with hero, feature highlights and an FAQ section.</p>
+            <ul class="tech"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+            <a class="mini-link" href="https://github.com/munna89-ig/Netflix-Homepage-Clone" target="_blank">View code</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="contact-title">Let's build something.</h2>
+          <p class="section-sub">
+            I'm looking for Software Engineer Intern, .NET Developer, Backend and Full-Stack roles.
+            Send a message or email me directly.
+          </p>
+          <a class="contact-email" href="mailto:rofiqullahmunna82@gmail.com">rofiqullahmunna82@gmail.com</a>
+          <div class="socials">
+            <a href="https://github.com/munna89-ig" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/rofiqullah-munna-76301930a" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <label>Name<input type="text" id="name" autocomplete="name" required /></label>
+          <label>Email<input type="email" id="email" autocomplete="email" required /></label>
+          <label>Message<textarea id="message" rows="5" required></textarea></label>
+          <p class="form-msg" id="formMsg" role="status"></p>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Md. Rofiqullah Munna. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
