@@ -1,4 +1,3 @@
-
 const API = {
   me: {
     name: "Md. Rofiqullah Munna",
@@ -93,20 +92,19 @@ endpointBtns.forEach(btn => {
   });
 });
 
-sendRequest("me"); 
+sendRequest("me");
 
+
+// Theme: page load e sob shomoy light, click korle dark/light switch
 const themeBtn = document.getElementById("themeToggle");
 
 function setTheme(light) {
   document.body.classList.toggle("light", light);
   themeBtn.textContent = light ? "☾" : "☀";
   themeBtn.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
-  try { localStorage.setItem("theme", light ? "light" : "dark"); } catch (e) { /* storage blocked */ }
 }
 
-let savedTheme = null;
-try { savedTheme = localStorage.getItem("theme"); } catch (e) { /* storage blocked */ }
-setTheme(savedTheme === "light");
+setTheme(true); // start always light
 
 themeBtn.addEventListener("click", () => setTheme(!document.body.classList.contains("light")));
 
